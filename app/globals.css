@@ -57,6 +57,52 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--sand-dark);
 }
 
+/* ── react-day-picker calendar theme ── */
+.booking-calendar .rdp {
+  --rdp-accent-color: var(--sand);
+  --rdp-background-color: rgba(198,169,105,0.15);
+  --rdp-accent-color-dark: var(--sand-dark);
+  --rdp-background-color-dark: rgba(198,169,105,0.2);
+  margin: 0;
+  color: white;
+}
+.booking-calendar .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: rgba(198,169,105,0.2);
+  color: white;
+}
+.booking-calendar .rdp-day_selected,
+.booking-calendar .rdp-day_range_start,
+.booking-calendar .rdp-day_range_end {
+  background-color: var(--sand) !important;
+  color: var(--ocean-dark) !important;
+  font-weight: 600;
+}
+.booking-calendar .rdp-day_range_middle {
+  background-color: rgba(198,169,105,0.2) !important;
+  color: white !important;
+}
+.booking-calendar .rdp-day_disabled {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+.booking-calendar .rdp-caption_label {
+  color: white;
+  font-family: var(--font-cormorant);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+.booking-calendar .rdp-head_cell {
+  color: var(--sand-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+.booking-calendar .rdp-nav_button {
+  color: var(--sand);
+}
+.booking-calendar .rdp-nav_button:hover {
+  background-color: rgba(198,169,105,0.2);
+}
+
 /* Gallery horizontal scroll */
 .gallery-scroll {
   scrollbar-width: none;
