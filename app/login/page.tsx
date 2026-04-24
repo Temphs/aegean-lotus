@@ -28,9 +28,8 @@ function LoginForm() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (password === SITE_PASSWORD) {
-      // Set cookie (30-day expiry)
-      const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
-      document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE}; expires=${expires}; path=/; SameSite=Strict`;
+      // Session cookie — expires when browser is closed (always required on new visit)
+      document.cookie = `${COOKIE_NAME}=${COOKIE_VALUE}; path=/; SameSite=Strict`;
       const from = searchParams.get("from") || "/";
       router.replace(from);
     } else {
